@@ -175,28 +175,6 @@ log4js.addAppender(
 );
 ```
 
-#### skipSubsequentErrors
-If there is an error inserting, only output the first one.
-
-* | *
---- | ---
-Type | `boolean`
-Required | `false`
-Default value | `false`
-
-```js
-var log4js = require('log4js'),
-    mongoAppender = require('log4js-node-mongodb');
-
-log4js.addAppender(
-    mongoAppender.appender({
-        connectionString: 'localhost:27017/logs',
-        skipSubsequentErrors: true
-    }),
-    'cheese'
-);
-```
-
 #### write
 The write mode of the mongo db insert operation. With this option you have control over the [write concern](http://docs.mongodb.org/manual/core/write-concern/) of mongo db.
 
